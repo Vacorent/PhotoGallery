@@ -1,0 +1,9 @@
+CREATE DATABASE appbnb;
+
+USE appbnb;
+
+CREATE TABLE photos (
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  url VARCHAR(255) NOT NULL ,
+  description VARCHAR(255) DEFAULT ''
+);
