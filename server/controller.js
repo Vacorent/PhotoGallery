@@ -1,6 +1,5 @@
 const mysql = require('mysql');
 const model = require('./model.js');
-const seed = require('../db/seed.js');
 
 module.exports = {
   getPhotos: (req, res) => {
