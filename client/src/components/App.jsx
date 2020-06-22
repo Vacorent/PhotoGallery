@@ -27,7 +27,7 @@ class App extends React.Component {
       .then(response => {
         console.log('CLIENT Get Photos');
         var initPhotos = [];
-        for (var i = 1; i < 6; i++) {
+        for (var i = 0; i < 5; i++) {
           initPhotos.push(response.data[i]);
         }
         this.setState({
