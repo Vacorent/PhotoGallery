@@ -2,7 +2,7 @@ const faker = require('faker');
 const mysql = require('mysql');
 const db = require('./index.js');
 
-for (var i = 0; i < 71; i++) {
+for (var i = 1; i <= 72; i++) {
   let imageUrl = 'https://appbnb.s3-us-west-1.amazonaws.com/' + `image${i}` + '.jpg';
   let description = faker.lorem.sentence();
 
