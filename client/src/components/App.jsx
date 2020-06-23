@@ -52,7 +52,7 @@ class App extends React.Component {
           <div className="wrapper">
             <div className="homeGrid">
               <div className="photo1Container">
-                <img className="photo1" src={this.state.homePhotos[0].url} />
+                <img className="photo1" src={this.state.homePhotos[0].url} onClick={this.handleClick}/>
               </div>
               <div className="photo23">
                 <div className="photo2Container">
@@ -68,10 +68,10 @@ class App extends React.Component {
                 </div>
                 <div className="photo5Container">
                   <img className="photo5" src={this.state.homePhotos[4].url} />
+                  <a className="showAll">Show all photos</a>
                 </div>
               </div>
             </div>
-            <a className="showAll">Show all photos</a>
           </div>
         )
       }
