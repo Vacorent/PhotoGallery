@@ -1,40 +1,74 @@
 .homeGrid {
-  border-collapse: collapse;
-  display: grid;
-  grid-template-columns: 50% 25% 25%;
-  grid-gap: 10px;
-  grid-template-rows: 200px 200px;
+  display: flex;
+  display: -webkit-flex;
+  margin: 0px 40px;
+
 }
 
-.boxOne {
-  grid-column: 1;
-  grid-row: 1 / 3;
-  vertical-align: bottom;
-  object-fit: cover;
+.homeGrid div {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.photo1Container {
+  flex: 2;
+}
+
+.photo1 {
   border-radius: 15px 0px 0px 15px;
-}
-
-.boxTwo {
-  border: 1px solid black;
-}
-
-.boxThree {
-  border: 1px solid black;
-  border-radius: 0px 15px 0px 0px;
-}
-
-.boxFour {
-  border: 1px solid black;
-}
-
-.boxFive {
-  border: 1px solid black;
-  border-radius: 0px 0px 15px 0px;
-}
-
-.homePhoto1 {
   display: block;
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 15px 0px 0px 15px;
+  height: 100%;
+  width: 100%;
+}
+
+.photo23, .photo45 {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.photo2Container, .photo3Container, .photo4Container, .photo5Container {
+  flex: 1;
+  height: 50%;
+}
+
+.photo2, .photo3 {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.photo4 {
+  border-radius: 0px 15px 0px 0px;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.photo5 {
+  border-radius: 0px 0px 15px 0px;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.showAll {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-attachment: scroll;
+  background-clip: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 7px;
+  position: relative;
+  text-align: center;
+  text-size-adjust: 100%;
+  width: auto;
 }
