@@ -6,7 +6,8 @@
   "scripts": {
     "react-dev": "webpack -d --watch",
     "start": "node ./server/index.js",
-    "db:setup": "node ./db/seed.js"
+    "db:setup": "node ./db/seed.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",

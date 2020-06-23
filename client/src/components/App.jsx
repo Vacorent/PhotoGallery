@@ -1,6 +1,5 @@
 import React from 'react';
 import PhotoList from './PhotoList.jsx';
-import HomeList from './HomeList.jsx';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -50,14 +49,29 @@ class App extends React.Component {
       } else {
         console.log(this.state.homePhotos)
         return (
-          <div className="homeGrid">
-            <div className="boxOne">
-              <img className="homePhoto1" onClick={this.handleClick} src={this.state.homePhotos[0].url}/>
+          <div className="wrapper">
+            <div className="homeGrid">
+              <div className="photo1Container">
+                <img className="photo1" src={this.state.homePhotos[0].url} />
+              </div>
+              <div className="photo23">
+                <div className="photo2Container">
+                  <img className="photo2" src={this.state.homePhotos[1].url} />
+                </div>
+                <div className="photo3Container">
+                  <img className="photo3" src={this.state.homePhotos[2].url} />
+                </div>
+              </div>
+              <div className="photo45">
+                <div className="photo4Container">
+                  <img className="photo4" src={this.state.homePhotos[3].url} />
+                </div>
+                <div className="photo5Container">
+                  <img className="photo5" src={this.state.homePhotos[4].url} />
+                </div>
+              </div>
             </div>
-            <div className="boxTwo">2</div>
-            <div className="boxThree">3</div>
-            <div className="boxFour">4</div>
-            <div className="boxFive">5</div>
+            <a className="showAll">Show all photos</a>
           </div>
         )
       }
