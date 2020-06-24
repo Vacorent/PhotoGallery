@@ -104,6 +104,7 @@
   background-attachment: scroll;
   background-clip: border-box;
   box-sizing: border-box;
+  cursor: pointer;
   display: inline-block;
   font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
   font-size: 14px;
@@ -140,23 +141,11 @@ a:hover {
   color: black;
 }
 
-.previous {
-  background-color: white;
-  color: black;
-  font-size: 32px;
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
-  font-weight: 0;
-  top: 12px;
-  right: 1640px;
-  text-align: center;
-  line-height: 18px;
-  width: 50%;
-}
-
-.round {
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
+.backArrow {
+  height: 16px;
+  width: 16px;
+  display: block;
+  fill: currentcolor;
 }
 
 .photoItemWrapper {
