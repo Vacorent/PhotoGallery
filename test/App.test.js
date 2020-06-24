@@ -1,6 +1,7 @@
 import React from 'react';
 import App from '../client/src/components/App.jsx';
 import {shallow, mount, render} from 'enzyme';
+import Promise from 'bluebird';
 
 describe('<App /> rendering', () => {
   let wrapper;
