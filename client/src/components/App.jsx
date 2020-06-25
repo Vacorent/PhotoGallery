@@ -27,7 +27,7 @@ class App extends React.Component {
   getPhotos() {
     axios.get('/api/photos')
       .then(response => {
-        console.log('CLIENT Get Photos');
+        // console.log('CLIENT Get Photos');
         var initPhotos = [];
         for (var i = 0; i < 5; i++) {
           initPhotos.push(response.data[i]);

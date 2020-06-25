@@ -15,9 +15,4 @@ describe('<App /> rendering', () => {
     expect(instance.getPhotos).toHaveBeenCalledTimes(1);
   });
 
-  // it(`should check pictures to not be empty`, () => {
-  //   const instance = wrapper.instance();
-  //   expect(instance.state.homeActive).toEqual(true);
-  // })
-
 });
