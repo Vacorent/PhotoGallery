@@ -20,7 +20,7 @@ for (var i = 1; i <= 72; i++) {
 for (let i = 0; i < 100; i++) {
   let title = faker.lorem.words();
   let avg = faker.random.number({min: 2.50, max: 5, precision:0.01});
-  let fixedAvg = avg.toFixed(2);
+  avg = avg.toFixed(2);
   let reviews = faker.random.number({min: 20, max: 1000});
   let city = faker.address.city();
   let state = faker.address.state();
@@ -28,7 +28,7 @@ for (let i = 0; i < 100; i++) {
   let superUser = faker.random.number({min: 0, max: 1});
 
 
-  let queryStr = `INSERT INTO header (title, avg, reviews, city, state, country, superUser) VALUES ('${title}', ${fixedAvg}, ${reviews},   '${city}', '${state}', "${country}", ${superUser})`;
+  let queryStr = `INSERT INTO header (title, avg, reviews, city, state, country, superUser) VALUES ('${title}', ${avg}, ${reviews}, '${city}', '${state}', "${country}", ${superUser})`;
 
   db.connection.query(queryStr, (err, result) => {
     if (err) {

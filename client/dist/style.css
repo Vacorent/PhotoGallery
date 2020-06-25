@@ -2,14 +2,75 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.7rem;
   position: relative;
-  left: 20.7%;
+  left: 350px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .starRating, .star {
-  position: relative;
+  position: absolute;
   fill: #ff385c;
-  top: -11px;
-  left: 20.7%;
+  top: 62px;
+  left: 355px;
+}
+
+.avg {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  position: relative;
+  top: -12px;
+  left: 365px;
+}
+
+.reviews {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: rgb(113, 113, 113);
+  position: relative;
+  top: -12px;
+  left: 368px;
+}
+
+.dotSeparator {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: rgb(113, 113, 113);
+  position: relative;
+  top: -12px;
+  left: 378px;
+}
+
+.location {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #717171;
+  position: relative;
+  top: -12px;
+  left: 388px;
+}
+
+.share {
+  display: block;
+  height: 16px;
+  width: 16px;
+  fill: currentcolor;
+  position: absolute;
+  top: 50px;
+  left: 1330px;
+}
+
+.saveListing {
+  display: block;
+  fill: none;
+  height: 16px;
+  width: 16px;
+  stroke: currentcolor;
+  stroke-width: 2;
+  overflow: visible;
+  position: absolute;
+  top: 50px;
+  left: 1400px;
 }
 
 .wrapper {
