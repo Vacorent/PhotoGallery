@@ -6,7 +6,7 @@ describe('API GET Request for photos', () => {
       .then(response => {
         expect(response.status).toBe(201);
         expect(response.data.length).toBe(72)
-      })
+      });
   });
 
   it ('should return response 201 with 100 reviews', () => {
@@ -15,6 +15,6 @@ describe('API GET Request for photos', () => {
         console.log(response.data.length);
         expect(response.status).toBe(201);
         expect(response.data.length).toBe(100);
-      })
+      });
   });
-});
+})
