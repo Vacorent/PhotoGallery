@@ -7,10 +7,8 @@ class PhotoItem extends React.Component {
 
   render() {
     return (
-      <div className="photoItemWrapper">
-        <div className="photoItemContainer">
-          <img className="photoItem" src={this.props.photo.url}/>
-        </div>
+      <div>
+        <img className="photoItem" src={this.props.photo.url}/>
       </div>
     )
   }

@@ -1,3 +1,5 @@
+DROP DATABASE appbnb;
+
 CREATE DATABASE appbnb;
 
 USE appbnb;
