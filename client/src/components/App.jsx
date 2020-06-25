@@ -1,5 +1,6 @@
 import React from 'react';
 import PhotoList from './PhotoList.jsx';
+import Header from './Header.jsx';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -32,7 +33,7 @@ class App extends React.Component {
           initPhotos.push(response.data[i]);
         }
         this.setState({
-          photos: response.data,
+          allPhotos: response.data,
           homePhotos: initPhotos
         });
       })
@@ -60,29 +61,31 @@ class App extends React.Component {
       if (this.state.homePhotos.length === 0) {
         return(null);
       } else {
-        console.log(this.state.homePhotos)
         return (
-          <div className="wrapper">
-            <div className="homeGrid">
-              <div className="photo1Container">
-                <div className="overlay"></div>
-                <img className="photo1" src={this.state.homePhotos[0].url} onClick={this.handlePhotoClick} />
-              </div>
-              <div className="photo23">
-                <div className="photo2Container">
-                  <img className="photo2" src={this.state.homePhotos[1].url} onClick={this.handlePhotoClick} />
+          <div>
+            <Header />
+            <div className="wrapper">
+              <div className="homeGrid">
+                <div className="photo1Container">
+                  <div className="overlay"></div>
+                  <img className="photo1" src={this.state.homePhotos[0].url} onClick={this.handlePhotoClick} />
                 </div>
-                <div className="photo3Container">
-                  <img className="photo3" src={this.state.homePhotos[2].url} onClick={this.handlePhotoClick} />
+                <div className="photo23">
+                  <div className="photo2Container">
+                    <img className="photo2" src={this.state.homePhotos[1].url} onClick={this.handlePhotoClick} />
+                  </div>
+                  <div className="photo3Container">
+                    <img className="photo3" src={this.state.homePhotos[2].url} onClick={this.handlePhotoClick} />
+                  </div>
                 </div>
-              </div>
-              <div className="photo45">
-                <div className="photo4Container">
-                  <img className="photo4" src={this.state.homePhotos[3].url} onClick={this.handlePhotoClick} />
-                </div>
-                <div className="photo5Container">
-                  <img className="photo5" src={this.state.homePhotos[4].url} onClick={this.handlePhotoClick} />
-                  <a className="showAll" onClick={this.handleAllClick}>Show all photos</a>
+                <div className="photo45">
+                  <div className="photo4Container">
+                    <img className="photo4" src={this.state.homePhotos[3].url} onClick={this.handlePhotoClick} />
+                  </div>
+                  <div className="photo5Container">
+                    <img className="photo5" src={this.state.homePhotos[4].url} onClick={this.handlePhotoClick} />
+                    <a className="showAll" onClick={this.handleAllClick}>Show all photos</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -92,7 +95,7 @@ class App extends React.Component {
     } else if (this.state.photoListActive) {
       return (
         <div>
-          <PhotoList photos={this.state.photos} handleHome={this.handleBackHome}/>
+          <PhotoList photos={this.state.allPhotos} handleHome={this.handleBackHome}/>
         </div>
       )
     }

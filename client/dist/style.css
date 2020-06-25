@@ -1,3 +1,17 @@
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  position: relative;
+  left: 20.7%;
+}
+
+.starRating, .star {
+  position: relative;
+  fill: #ff385c;
+  top: -11px;
+  left: 20.7%;
+}
+
 .wrapper {
   align-items: stretch;
   box-sizing: border-box;
@@ -122,7 +136,7 @@
   right: 2%;
 }
 
-svg:hover, path:hover {
+.backArrow:hover, path:hover {
   background-color: rgb(240, 240, 240);
   opacity: 1;
   color: black;

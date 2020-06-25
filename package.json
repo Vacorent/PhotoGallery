@@ -27,6 +27,7 @@
     "babel-loader": "^8.1.0",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "css-loader": "^3.6.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
@@ -37,6 +38,7 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "express": "^4.17.1",
+    "faker": "^4.1.0",
     "jest": "^26.0.1",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.4",
@@ -49,7 +51,6 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "faker": "^4.1.0",
     "knex": "^0.21.1"
   }
 }
