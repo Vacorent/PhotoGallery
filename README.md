@@ -22,7 +22,7 @@
 > Seed the database --> npm run db:setup \
 > Start the server --> npm start \
 > (separate terminal) Run webpack --> npm run react-dev \git add
-> (in browser) url: http://localhost:3000 \
+> (in browser) url: http://localhost:3002 \
 
 ## Requirements
 
