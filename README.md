@@ -20,6 +20,7 @@
 
 > (In terminal) Create the database mySQL database and tables --> mysql -u root -p < schema.sql \
 > Seed the database --> npm run db:setup \
+> Change the password in db/index.js to your own mySQL password \
 > Start the server --> npm start \
 > (separate terminal) Run webpack --> npm run react-dev \git add
 > (in browser) url: http://localhost:3002 \
