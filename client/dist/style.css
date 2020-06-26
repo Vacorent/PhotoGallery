@@ -326,6 +326,7 @@ a:hover {
 }
 
 .current-description {
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   align-content: center;
 }

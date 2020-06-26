@@ -21,6 +21,7 @@ class App extends React.Component {
     this.handlePhotoClick = this.handlePhotoClick.bind(this);
     this.handleAllClick = this.handleAllClick.bind(this);
     this.handleBackHome = this.handleBackHome.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   componentDidMount() {
@@ -59,6 +60,10 @@ class App extends React.Component {
     this.setState(state);
   }
 
+  handleClose(state) {
+    this.setState(state);
+  }
+
   render() {
     if (this.state.homeActive) {
       if (this.state.homePhotos.length === 0) {
@@ -67,7 +72,7 @@ class App extends React.Component {
         return (
           <div>
             <Header />
-            <HomeGrid photos={this.state.homePhotos} onClick={this.handlePhotoClick} allClick={this.handleAllClick}/>
+            <HomeGrid photos={this.state.homePhotos} onClick={this.handlePhotoClick} allClick={this.handleAllClick} onClose={this.handleClose}/>
           </div>
         )
       }
@@ -79,7 +84,7 @@ class App extends React.Component {
       )
     } else if (this.state.photoItemActive) {
       return (
-        <ClickedPhoto photo={this.state.currentPhoto}/>
+        <ClickedPhoto photo={this.state.currentPhoto} onClose={this.handleClose}/>
       )
     }
   }
