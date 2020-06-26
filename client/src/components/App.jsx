@@ -70,7 +70,7 @@ class App extends React.Component {
         return(null);
       } else {
         return (
-          <div>
+          <div className="app-container">
             <Header />
             <HomeGrid photos={this.state.homePhotos} onClick={this.handlePhotoClick} allClick={this.handleAllClick} onClose={this.handleClose}/>
           </div>
