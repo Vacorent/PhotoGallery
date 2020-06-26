@@ -9,11 +9,20 @@ class HomeGrid extends React.Component {
     }
 
     this.handlePhotoClick = this.handlePhotoClick.bind(this);
+    this.handleAllClick = this.handleAllClick.bind(this);
   }
 
   handlePhotoClick (event) {
     event.preventDefault();
     this.props.onClick(event.target);
+  }
+
+  handleAllClick (event) {
+    event.preventDefault();
+    this.props.allClick({
+      homeActive: false,
+      photoListActive: true
+    })
   }
 
   render() {

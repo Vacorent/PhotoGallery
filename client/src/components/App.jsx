@@ -1,7 +1,8 @@
 import React from 'react';
-import PhotoList from './PhotoList.jsx';
 import Header from './Header.jsx';
 import HomeGrid from './HomeGrid.jsx';
+import PhotoList from './PhotoList.jsx';
+import ClickedPhoto from './ClickedPhoto.jsx'
 import axios from 'axios';
 
 class App extends React.Component {
@@ -17,7 +18,6 @@ class App extends React.Component {
     }
 
     this.getPhotos = this.getPhotos.bind(this);
-    this.handleGridClick = this.handleGridClick.bind(this);
     this.handlePhotoClick = this.handlePhotoClick.bind(this);
     this.handleAllClick = this.handleAllClick.bind(this);
     this.handleBackHome = this.handleBackHome.bind(this);
@@ -42,24 +42,17 @@ class App extends React.Component {
       .catch(err => console.log('CLIENT Could not get photos'))
   }
 
-  handleGridClick(imgData) {
+  handlePhotoClick(photoData) {
     this.setState({
-      currentPhoto: imgData,
+      currentPhoto: photoData,
       homeActive: false,
-      photoItemActive: true,
+      photoListActive: false,
+      photoItemActive: true
     })
-  }
-
-  handlePhotoClick(item) {
-    let img = item.url;
   }
 
   handleAllClick(state) {
-    event.preventDefault();
-    this.setState({
-      homeActive: false,
-      photoListActive: true
-    })
+    this.setState(state);
   }
 
   handleBackHome(state) {
@@ -74,22 +67,19 @@ class App extends React.Component {
         return (
           <div>
             <Header />
-            <HomeGrid photos={this.state.homePhotos} onClick={this.handleGridClick}/>
+            <HomeGrid photos={this.state.homePhotos} onClick={this.handlePhotoClick} allClick={this.handleAllClick}/>
           </div>
         )
       }
     } else if (this.state.photoListActive) {
       return (
         <div>
-          <PhotoList photos={this.state.allPhotos} handleHome={this.handleBackHome}/>
+          <PhotoList photos={this.state.allPhotos} onClick={this.handlePhotoClick} handleHome={this.handleBackHome} />
         </div>
       )
     } else if (this.state.photoItemActive) {
       return (
-        <div className="clickedPhoto">
-          <img className="currentPhoto" src={this.state.currentPhoto.src} />
-          <span className="currentDescription">{this.state.currentPhoto.alt}</span>
-        </div>
+        <ClickedPhoto photo={this.state.currentPhoto}/>
       )
     }
   }

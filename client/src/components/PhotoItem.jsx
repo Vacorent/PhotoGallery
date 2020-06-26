@@ -9,7 +9,7 @@ class PhotoItem extends React.Component {
 
   photoClick(event) {
     event.preventDefault();
-    console.log(event.target.src)
+    this.props.onClick(event.target)
   }
 
   render() {
