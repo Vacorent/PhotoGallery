@@ -1,4 +1,4 @@
-.app-container {
+.app-home-container {
   display: block;
 }
 
@@ -292,24 +292,51 @@ a:hover {
   color: black;
 }
 
-.backArrow {
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
+.app-photolist-container {
   display: flex;
-  fill: currentcolor;
-  position: relative;
-  top: -4930px;
-  right: 980px;
+  width: 100%;
+  height: 100%;
+}
+
+.photoListContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.photoListWrapper {
+  column-count: 2;
+  column-gap: 10px;
+  max-width: 1000px;
+  margin-top: 60px;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 .photoList {
-  display: flex;
+  display: block;
   box-sizing: border-box;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  left: 1000px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.backArrowWrapper{
+  display: flex;
+  position: relative;
+  right: 1315px;
+  top: 15px;
+}
+
+.backArrow {
+  display: flex;
+  height: 16px;
+  width: 20px;
+  border-radius: 50%;
+  fill: currentcolor;
+  position: relative;
 }
 
 .photoItemWrapper {
