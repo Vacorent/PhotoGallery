@@ -1,62 +1,57 @@
-.header {
-  display: block;
-  text-align: left;
-  position: absolute;
+.header-container {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
   width: 100%;
-  height: 100%;
+}
+
+.header-wrapper {
+  display: block;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.title-wrapper {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  text-align: left;
 }
 
 .title {
   display: block;
   position: relative;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.7rem;
   text-align: left;
-  top: 30px;
-  left: 1155px;
+  width: 100%;
 }
 
-.starRating, .star {
-  position: absolute;
-  fill: #ff385c;
-  top: 95px;
-  left: 1155px;
+.star-wrapper {
+  display: block;
+  border-spacing: border-box;
+  position: relative;
+  top: 195px;
 }
 
-.avg {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  position: absolute;
-  top: 95px;
-  left: 1173px;
+.avg-wrapper {
+
 }
 
-.reviews {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  color: rgb(113, 113, 113);
-  position: absolute;
-  top: 95px;
-  left: 1202px;
+.avg {}
+
+.reviews-wrapper {
+
 }
 
-.dotSeparator {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  color: rgb(113, 113, 113);
-  position: absolute;
-  top: 95px;
-  left: 1252px;
+.dot-wrapper {
+
 }
 
-.location {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  text-decoration: underline;
-  color: #717171;
-  position: absolute;
-  top: 95px;
-  left: 1274px;
+.location-wrapper {
+
+}
+
+.share-icon-wrapper {
+
 }
 
 .shareIcon {
@@ -65,31 +60,10 @@
   width: 16px;
   fill: currentcolor;
   position: absolute;
-  top: 95px;
-  left: 2132px;
 }
 
-.shareListingBtn {
-  display: block;
-  position: absolute;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: left;
-  text-decoration: underline;
-  top: 95px;
-  left: 2157px;
-}
-.shareListing {
-  display: block;
-  position: absolute;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: left;
-  text-decoration: underline;
-  top: 95px;
-  left: 2157px;
+.save-icon-wrapper {
+
 }
 
 .saveIcon {
@@ -101,20 +75,6 @@
   stroke-width: 2;
   overflow: visible;
   position: absolute;
-  top: 95px;
-  left: 2212px;
-}
-
-.saveListing {
-  display: block;
-  position: absolute;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: left;
-  text-decoration: underline;
-  top: 95px;
-  left: 2237px;
 }
 
 .wrapper {
@@ -315,7 +275,6 @@ a:hover {
 }
 
 .current-photo {
-
 }
 
 .description-wrapper {
