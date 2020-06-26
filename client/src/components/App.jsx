@@ -9,6 +9,7 @@ class App extends React.Component {
     this.state = {
       allPhotos: [],
       homePhotos: [],
+      currentPhoto: [],
       homeActive: true,
       photoListActive: false,
       photoItemActive: false
@@ -42,6 +43,7 @@ class App extends React.Component {
 
   handlePhotoClick(event) {
     event.preventDefault();
+    console.log()
   }
 
   handleAllClick(event) {
@@ -98,6 +100,8 @@ class App extends React.Component {
           <PhotoList photos={this.state.allPhotos} handleHome={this.handleBackHome}/>
         </div>
       )
+    } else if (this.state.photoItemActive) {
+
     }
   }
 };
