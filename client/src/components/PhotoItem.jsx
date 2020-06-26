@@ -15,7 +15,7 @@ class PhotoItem extends React.Component {
   render() {
     return (
       <div>
-        <img className="photoItem" src={this.props.photo.url} onClick={this.photoClick}/>
+        <img className="photoItem" src={this.props.photo.url} alt={this.props.photo.description} onClick={this.photoClick}/>
       </div>
     )
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import PhotoList from './PhotoList.jsx';
 import Header from './Header.jsx';
+import HomeGrid from './HomeGrid.jsx';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -9,7 +10,7 @@ class App extends React.Component {
     this.state = {
       allPhotos: [],
       homePhotos: [],
-      currentPhoto: '',
+      currentPhoto: {},
       homeActive: true,
       photoListActive: false,
       photoItemActive: false
@@ -33,7 +34,6 @@ class App extends React.Component {
         for (var i = 0; i < 5; i++) {
           initPhotos.push(response.data[i]);
         }
-        console.log(initPhotos);
         this.setState({
           allPhotos: response.data,
           homePhotos: initPhotos
@@ -42,14 +42,11 @@ class App extends React.Component {
       .catch(err => console.log('CLIENT Could not get photos'))
   }
 
-  handleGridClick(event) {
-    event.preventDefault();
-    let img = event.target.src;
-    console.log(event.target)
+  handleGridClick(imgData) {
     this.setState({
+      currentPhoto: imgData,
       homeActive: false,
       photoItemActive: true,
-      currentPhoto: img
     })
   }
 
@@ -57,7 +54,7 @@ class App extends React.Component {
     let img = item.url;
   }
 
-  handleAllClick(event) {
+  handleAllClick(state) {
     event.preventDefault();
     this.setState({
       homeActive: false,
@@ -77,31 +74,7 @@ class App extends React.Component {
         return (
           <div>
             <Header />
-            <div className="wrapper">
-              <div className="homeGrid">
-                <div className="photo1Container">
-                  <div className="overlay"></div>
-                  <img className="photo1" description={this.state.homePhotos[0].description} src={this.state.homePhotos[0].url} onClick={this.handleGridClick} />
-                </div>
-                <div className="photo23">
-                  <div className="photo2Container">
-                    <img className="photo2" description={this.state.homePhotos[1].description} src={this.state.homePhotos[1].url} onClick={this.handleGridClick} />
-                  </div>
-                  <div className="photo3Container">
-                    <img className="photo3" description={this.state.homePhotos[2].description} src={this.state.homePhotos[2].url} onClick={this.handleGridClick} />
-                  </div>
-                </div>
-                <div className="photo45">
-                  <div className="photo4Container">
-                    <img className="photo4" description={this.state.homePhotos[3].description} src={this.state.homePhotos[3].url} onClick={this.handleGridClick} />
-                  </div>
-                  <div className="photo5Container">
-                    <img className="photo5" description={this.state.homePhotos[4].description} src={this.state.homePhotos[4].url} onClick={this.handleGridClick} />
-                    <a className="showAll" onClick={this.handleAllClick}>Show all photos</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <HomeGrid photos={this.state.homePhotos} onClick={this.handleGridClick}/>
           </div>
         )
       }
@@ -113,9 +86,9 @@ class App extends React.Component {
       )
     } else if (this.state.photoItemActive) {
       return (
-        <div className="currentPage">
-          <img className="currentPhoto" src={this.state.currentPhoto} />
-          <span className="currentDescription">hi</span>
+        <div className="clickedPhoto">
+          <img className="currentPhoto" src={this.state.currentPhoto.src} />
+          <span className="currentDescription">{this.state.currentPhoto.alt}</span>
         </div>
       )
     }
