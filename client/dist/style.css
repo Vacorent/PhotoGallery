@@ -1,3 +1,122 @@
+.header {
+  display: block;
+  text-align: left;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  display: block;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  text-align: left;
+  top: 30px;
+  left: 1155px;
+}
+
+.starRating, .star {
+  position: absolute;
+  fill: #ff385c;
+  top: 95px;
+  left: 1155px;
+}
+
+.avg {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  position: absolute;
+  top: 95px;
+  left: 1173px;
+}
+
+.reviews {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: rgb(113, 113, 113);
+  position: absolute;
+  top: 95px;
+  left: 1202px;
+}
+
+.dotSeparator {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: rgb(113, 113, 113);
+  position: absolute;
+  top: 95px;
+  left: 1252px;
+}
+
+.location {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #717171;
+  position: absolute;
+  top: 95px;
+  left: 1274px;
+}
+
+.shareIcon {
+  display: block;
+  height: 16px;
+  width: 16px;
+  fill: currentcolor;
+  position: absolute;
+  top: 95px;
+  left: 2132px;
+}
+
+.shareListingBtn {
+  display: block;
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: underline;
+  top: 95px;
+  left: 2157px;
+}
+.shareListing {
+  display: block;
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: underline;
+  top: 95px;
+  left: 2157px;
+}
+
+.saveIcon {
+  display: block;
+  fill: none;
+  height: 16px;
+  width: 16px;
+  stroke: currentcolor;
+  stroke-width: 2;
+  overflow: visible;
+  position: absolute;
+  top: 95px;
+  left: 2212px;
+}
+
+.saveListing {
+  display: block;
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: underline;
+  top: 95px;
+  left: 2237px;
+}
+
 .wrapper {
   align-items: stretch;
   box-sizing: border-box;
@@ -5,7 +124,7 @@
   flex-wrap: wrap;
   justify-content: center;
   line-height: 20px;
-  margin: 0px 30px;
+  margin: 0px auto;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -18,9 +137,9 @@
   flex-wrap: nowrap;
   justify-content: center;
   line-height: 20px;
-  margin: 0px 30px;
+  margin: 0px auto;
   position: absolute;
-
+  top: 10%;
 }
 
 .photo1Container {
@@ -122,7 +241,7 @@
   right: 2%;
 }
 
-svg:hover, path:hover {
+.backArrow:hover, path:hover {
   background-color: rgb(240, 240, 240);
   opacity: 1;
   color: black;
@@ -146,17 +265,20 @@ a:hover {
   height: 16px;
   width: 16px;
   border-radius: 50%;
-  display: block;
+  display: flex;
   fill: currentcolor;
-  position: absolute;
-  top: -37px;
-  right: 97%;
+  position: relative;
+  top: -4930px;
+  right: 980px;
 }
 
 .photoList {
-  display: block;
+  display: flex;
   box-sizing: border-box;
-  position: relative;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  left: 1000px;
 }
 
 .photoItemWrapper {
