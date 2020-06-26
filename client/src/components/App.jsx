@@ -1,6 +1,8 @@
 import React from 'react';
-import PhotoList from './PhotoList.jsx';
 import Header from './Header.jsx';
+import HomeGrid from './HomeGrid.jsx';
+import PhotoList from './PhotoList.jsx';
+import ClickedPhoto from './ClickedPhoto.jsx'
 import axios from 'axios';
 
 class App extends React.Component {
@@ -9,7 +11,7 @@ class App extends React.Component {
     this.state = {
       allPhotos: [],
       homePhotos: [],
-      currentPhoto: [],
+      currentPhoto: {},
       homeActive: true,
       photoListActive: false,
       photoItemActive: false
@@ -19,6 +21,7 @@ class App extends React.Component {
     this.handlePhotoClick = this.handlePhotoClick.bind(this);
     this.handleAllClick = this.handleAllClick.bind(this);
     this.handleBackHome = this.handleBackHome.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   componentDidMount() {
@@ -28,7 +31,6 @@ class App extends React.Component {
   getPhotos() {
     axios.get('/api/photos')
       .then(response => {
-        // console.log('CLIENT Get Photos');
         var initPhotos = [];
         for (var i = 0; i < 5; i++) {
           initPhotos.push(response.data[i]);
@@ -41,20 +43,24 @@ class App extends React.Component {
       .catch(err => console.log('CLIENT Could not get photos'))
   }
 
-  handlePhotoClick(event) {
-    event.preventDefault();
-    console.log()
-  }
-
-  handleAllClick(event) {
-    event.preventDefault();
+  handlePhotoClick(photoData) {
     this.setState({
+      currentPhoto: photoData,
       homeActive: false,
-      photoListActive: true
+      photoListActive: false,
+      photoItemActive: true
     })
   }
 
+  handleAllClick(state) {
+    this.setState(state);
+  }
+
   handleBackHome(state) {
+    this.setState(state);
+  }
+
+  handleClose(state) {
     this.setState(state);
   }
 
@@ -66,42 +72,20 @@ class App extends React.Component {
         return (
           <div>
             <Header />
-            <div className="wrapper">
-              <div className="homeGrid">
-                <div className="photo1Container">
-                  <div className="overlay"></div>
-                  <img className="photo1" src={this.state.homePhotos[0].url} onClick={this.handlePhotoClick} />
-                </div>
-                <div className="photo23">
-                  <div className="photo2Container">
-                    <img className="photo2" src={this.state.homePhotos[1].url} onClick={this.handlePhotoClick} />
-                  </div>
-                  <div className="photo3Container">
-                    <img className="photo3" src={this.state.homePhotos[2].url} onClick={this.handlePhotoClick} />
-                  </div>
-                </div>
-                <div className="photo45">
-                  <div className="photo4Container">
-                    <img className="photo4" src={this.state.homePhotos[3].url} onClick={this.handlePhotoClick} />
-                  </div>
-                  <div className="photo5Container">
-                    <img className="photo5" src={this.state.homePhotos[4].url} onClick={this.handlePhotoClick} />
-                    <a className="showAll" onClick={this.handleAllClick}>Show all photos</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <HomeGrid photos={this.state.homePhotos} onClick={this.handlePhotoClick} allClick={this.handleAllClick} onClose={this.handleClose}/>
           </div>
         )
       }
     } else if (this.state.photoListActive) {
       return (
         <div>
-          <PhotoList photos={this.state.allPhotos} handleHome={this.handleBackHome}/>
+          <PhotoList photos={this.state.allPhotos} onClick={this.handlePhotoClick} handleHome={this.handleBackHome} />
         </div>
       )
     } else if (this.state.photoItemActive) {
-
+      return (
+        <ClickedPhoto photo={this.state.currentPhoto} onClose={this.handleClose}/>
+      )
     }
   }
 };
