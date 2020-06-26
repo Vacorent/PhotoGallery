@@ -298,3 +298,83 @@ a:hover {
   height: 100%;
   margin-bottom: 10px;
 }
+
+.photo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.photo-wrapper {
+  display: block;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.current-photo {
+
+}
+
+.description-wrapper {
+  text-align: center;
+  align-content: center;
+  position: relative;
+  top: 25%;
+}
+
+.current-description {
+  text-align: center;
+  align-content: center;
+}
+
+.close-btn-container {
+  display: inline-block;
+  align-items: flex-start;
+  border: none;
+  border-radius: 8px 8px 8px 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  font-stretch: 100%;
+  line-height: 18px;
+  position: relative;
+  text-align: center;
+  width: 90px;
+  height: 35px;
+  top: -710px;
+  left: 34px;
+}
+
+.close-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  line-height: 18px;
+  text-align: center;
+}
+
+.close-btn-x {
+  box-sizing: border-box;
+  display: block;
+  cursor: pointer;
+  font-size: 14px;
+  font-stretch: 100%;
+  line-height: 18px;
+  margin-right: 8px;
+  height: 12px;
+  width: 12px;
+  display: block;
+  fill: currentcolor;
+  position: relative;
+  text-align: center;
+  top: -2px;
+}
+
+.close-btn-text {
+  font-family: 'Montserrat', sans-serif;
+}
