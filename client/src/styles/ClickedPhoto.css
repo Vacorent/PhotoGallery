@@ -1,0 +1,175 @@
+.photoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.photoWrapper {
+  display: block;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.descriptionWrapper {
+  text-align: center;
+  align-content: center;
+  position: relative;
+  top: 25%;
+}
+
+.currentDescription {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  align-content: center;
+}
+
+.numPhotosWrapper {
+display: block;
+position: relative;
+margin: 0 auto;
+top: -680px;
+}
+
+.numPhotos {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  align-content: center;
+}
+
+.closeBtnContainer {
+  display: inline-block;
+  align-items: flex-start;
+  border: none;
+  border-radius: 8px 8px 8px 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  font-stretch: 100%;
+  line-height: 18px;
+  position: relative;
+  text-align: center;
+  width: 90px;
+  height: 35px;
+  top: -710px;
+  left: 34px;
+}
+
+.closeBtnWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  line-height: 18px;
+  text-align: center;
+}
+
+.closeBtnX {
+  box-sizing: border-box;
+  display: block;
+  cursor: pointer;
+  font-size: 14px;
+  font-stretch: 100%;
+  line-height: 18px;
+  margin-right: 8px;
+  height: 12px;
+  width: 12px;
+  display: block;
+  fill: currentcolor;
+  position: relative;
+  text-align: center;
+  top: -2px;
+}
+
+.closeBtnText {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nextBtn {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  top: -350px;
+  left: 700px;
+  margin: 0 auto;
+}
+
+.nextContainer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.nextWrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.nextSvg {
+  display: block;
+  text-align: center;
+  position: relative;
+  fill: none;
+  height: 16px;
+  width: 16px;
+  stroke: currentcolor;
+  stroke-width: 5.33333;
+  overflow: visible;
+  top: 13px;
+  right: 16px;
+}
+
+.prevBtn {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  top: -400px;
+  right: 700px;
+  margin: 0 auto;
+}
+
+.prevContainer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.prevWrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.prevSvg {
+  display: block;
+  text-align: center;
+  position: relative;
+  fill: none;
+  height: 16px;
+  width: 16px;
+  stroke: currentcolor;
+  stroke-width: 5.33333;
+  overflow: visible;
+  top: 13px;
+  right: 16px;
+}
