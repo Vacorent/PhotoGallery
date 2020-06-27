@@ -27,10 +27,10 @@
 }
 
 .numPhotosWrapper {
-display: block;
-position: relative;
-margin: 0 auto;
-top: -660px;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  top: -660px;
 }
 
 .numPhotos {
