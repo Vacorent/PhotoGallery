@@ -28,7 +28,7 @@ class HomeGrid extends React.Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <div className="homeGridWrapper">
         <div className="homeGrid">
           <div className="photo1Container">
             <div className="overlay"></div>
