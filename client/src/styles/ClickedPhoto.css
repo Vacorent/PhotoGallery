@@ -30,7 +30,7 @@
 display: block;
 position: relative;
 margin: 0 auto;
-top: -680px;
+top: -660px;
 }
 
 .numPhotos {
@@ -53,7 +53,7 @@ top: -680px;
   text-align: center;
   width: 90px;
   height: 35px;
-  top: -710px;
+  top: -680px;
   left: 34px;
 }
 
