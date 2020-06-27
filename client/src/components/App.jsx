@@ -70,7 +70,7 @@ class App extends React.Component {
         return(null);
       } else {
         return (
-          <div>
+          <div className="app-home-container">
             <Header />
             <HomeGrid photos={this.state.homePhotos} onClick={this.handlePhotoClick} allClick={this.handleAllClick} onClose={this.handleClose}/>
           </div>
@@ -78,7 +78,7 @@ class App extends React.Component {
       }
     } else if (this.state.photoListActive) {
       return (
-        <div>
+        <div className="app-photolist-container">
           <PhotoList photos={this.state.allPhotos} onClick={this.handlePhotoClick} handleHome={this.handleBackHome} />
         </div>
       )
