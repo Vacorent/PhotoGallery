@@ -9,7 +9,7 @@ class PhotoItem extends React.Component {
 
   photoClick(event) {
     event.preventDefault();
-    this.props.onClick(event.target)
+    this.props.onClick(event.target, {fromGrid: false})
   }
 
   render() {
