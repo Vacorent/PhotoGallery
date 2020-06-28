@@ -90,6 +90,8 @@
 
 .nextBtn {
   display: flex;
+  background-color: white;
+  border: 1px solid lightgrey;
   cursor: pointer;
   position: relative;
   align-content: center;
@@ -122,17 +124,19 @@
   text-align: center;
   position: relative;
   fill: none;
-  height: 16px;
-  width: 16px;
+  height: 12px;
+  width: 12px;
   stroke: currentcolor;
   stroke-width: 5.33333;
   overflow: visible;
-  top: 13px;
+  top: 17px;
   right: 16px;
 }
 
 .prevBtn {
   display: flex;
+  background-color: white;
+  border: 1px solid lightgrey;
   cursor: pointer;
   position: relative;
   align-content: center;
@@ -165,11 +169,15 @@
   text-align: center;
   position: relative;
   fill: none;
-  height: 16px;
-  width: 16px;
+  height: 12px;
+  width: 12px;
   stroke: currentcolor;
   stroke-width: 5.33333;
   overflow: visible;
-  top: 13px;
+  top: 17px;
   right: 16px;
+}
+
+.nextBtn:hover, .prevBtn:hover {
+  background-color: rgb(245, 245, 245);
 }
