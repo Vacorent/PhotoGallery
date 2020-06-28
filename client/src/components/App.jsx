@@ -47,7 +47,7 @@ class App extends React.Component {
       .catch(err => console.log('CLIENT Could not get photos'))
   }
 
-  handlePhotoClick(photoData) {
+  handlePhotoClick(photoData, state) {
     this.setState({
       currentPhoto: photoData,
       homeActive: false,
@@ -89,7 +89,7 @@ class App extends React.Component {
   }
 
   render() {
-    if (this.state.homeActive) {
+    if (this.state.homeActive && this.state.fromGrid) {
       if (this.state.homePhotos.length === 0) {
         return(null);
       } else {
@@ -100,7 +100,7 @@ class App extends React.Component {
           </div>
         )
       }
-    } else if (this.state.photoListActive) {
+    } else if (this.state.photoListActive && !this.state.fromGrid) {
       return (
         <div className={styles.appPhotolistContainer}>
           <PhotoList photos={this.state.allPhotos} onClick={this.handlePhotoClick} handleHome={this.handleBackHome} />
@@ -108,7 +108,7 @@ class App extends React.Component {
       )
     } else if (this.state.photoItemActive) {
       return (
-        <ClickedPhoto id={this.state.currentPhoto.id} photo={this.state.currentPhoto} numPhotos={this.state.allPhotos.length} onClose={this.handleClose} onNext={this.handleNext} onPrev={this.handlePrev}/>
+        <ClickedPhoto id={this.state.currentPhoto.id} photo={this.state.currentPhoto} numPhotos={this.state.allPhotos.length} gridClick={this.state.fromGrid} onClose={this.handleClose} onNext={this.handleNext} onPrev={this.handlePrev}/>
       )
     }
   }

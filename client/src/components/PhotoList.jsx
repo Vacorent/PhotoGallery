@@ -18,8 +18,8 @@ class PhotoList extends React.Component {
     })
   }
 
-  clickPhoto(photoData) {
-    this.props.onClick(photoData);
+  clickPhoto(photoData, state) {
+    this.props.onClick(photoData, state);
   }
 
   render() {

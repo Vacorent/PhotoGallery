@@ -21,6 +21,7 @@ class HomeGrid extends React.Component {
     event.preventDefault();
     this.props.allClick({
       homeActive: false,
+      fromGrid: false,
       photoListActive: true
     })
   }

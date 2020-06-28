@@ -8,8 +8,10 @@ class ClickedPhoto extends React.Component {
     this.state = {
       firstClick: true,
       nextPrevClick: false,
-      nextPrevPhoto: {}
+      nextPrevPhoto: {},
+      fromGrid: this.props.gridClick
     }
+
     this.handleClose = this.handleClose.bind(this);
     this.handleNext = this.handleNext.bind(this);
     this.handlePrev = this.handlePrev.bind(this);
@@ -17,10 +19,18 @@ class ClickedPhoto extends React.Component {
 
   handleClose(event) {
     event.preventDefault();
-    this.props.onClose({
-      photoListActive: true,
-      photoItemActive: false
-    })
+    if (this.state.fromGrid) {
+      this.props.onClose({
+        homeActive: true,
+        photoItemActive: false
+      })
+    } else {
+      this.props.onClose({
+        fromGrid: false,
+        photoListActive: true,
+        photoItemActive: false
+      })
+    }
   }
 
   handleNext(event) {
@@ -45,7 +55,6 @@ class ClickedPhoto extends React.Component {
 
   render() {
     if (this.state.firstClick) {
-      console.log(this.props.photo.id)
       if (Number(this.props.photo.id) === 1) {
         return (
           <div className={styles.photoContainer}>
