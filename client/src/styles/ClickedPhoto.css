@@ -13,6 +13,13 @@
   vertical-align: middle;
 }
 
+.currentPhoto {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+}
+
 .descriptionWrapper {
   text-align: center;
   align-content: center;
@@ -40,6 +47,12 @@
 }
 
 .closeBtnContainer {
+  display: flex;
+  position: relative;
+
+}
+
+.closeBtn {
   display: inline-block;
   align-items: flex-start;
   border: none;
@@ -88,6 +101,11 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.nextBtnContainer {
+  display: flex;
+  position: relative;
+}
+
 .nextBtn {
   display: flex;
   background-color: white;
@@ -133,6 +151,10 @@
   right: 16px;
 }
 
+.prevBtnContainer {
+  display: flex;
+  position: relative;
+}
 .prevBtn {
   display: flex;
   background-color: white;
