@@ -99,22 +99,32 @@
   color: #717171;
 }
 
+.shareListing {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  z-index: -1
+}
+
 .shareIconWrapper {
   display: block;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   position: relative;
-  top: -108px;
-  left: 990px;
+  top: -104px;
+  left: 975px;
+  z-index: -1;
 }
 
 .shareIcon {
   display: block;
+  cursor: pointer;
   height: 16px;
   width: 16px;
   fill: currentcolor;
   position: absolute;
+  z-index: -1
 }
 
 .shareListing {
