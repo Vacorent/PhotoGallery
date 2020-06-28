@@ -3,6 +3,7 @@ import Header from './Header.jsx';
 import HomeGrid from './HomeGrid.jsx';
 import PhotoList from './PhotoList.jsx';
 import ClickedPhoto from './ClickedPhoto.jsx'
+import styles from '../styles/App.css'
 import axios from 'axios';
 
 class App extends React.Component {
@@ -13,6 +14,7 @@ class App extends React.Component {
       homePhotos: [],
       currentPhoto: {},
       homeActive: true,
+      fromGrid: true,
       photoListActive: false,
       photoItemActive: false
     }
@@ -22,6 +24,8 @@ class App extends React.Component {
     this.handleAllClick = this.handleAllClick.bind(this);
     this.handleBackHome = this.handleBackHome.bind(this);
     this.handleClose = this.handleClose.bind(this);
+    this.handleNext = this.handleNext.bind(this);
+    this.handPrev = this.handlePrev.bind(this);
   }
 
   componentDidMount() {
@@ -64,13 +68,26 @@ class App extends React.Component {
     this.setState(state);
   }
 
+  handleNext(nextPhoto) {
+    this.setState({
+      currentPhoto: nextPhoto
+    })
+  }
+
+  handlePrev(prevPhoto) {
+    this.setState({
+      currentPhoto: prevPhoto
+    })
+
+  }
+
   render() {
     if (this.state.homeActive) {
       if (this.state.homePhotos.length === 0) {
         return(null);
       } else {
         return (
-          <div className="app-home-container">
+          <div className={styles.appHomeContainer}>
             <Header />
             <HomeGrid photos={this.state.homePhotos} onClick={this.handlePhotoClick} allClick={this.handleAllClick} onClose={this.handleClose}/>
           </div>
@@ -78,13 +95,13 @@ class App extends React.Component {
       }
     } else if (this.state.photoListActive) {
       return (
-        <div className="app-photolist-container">
+        <div className={styles.appPhotolistContainer}>
           <PhotoList photos={this.state.allPhotos} onClick={this.handlePhotoClick} handleHome={this.handleBackHome} />
         </div>
       )
     } else if (this.state.photoItemActive) {
       return (
-        <ClickedPhoto photo={this.state.currentPhoto} onClose={this.handleClose}/>
+        <ClickedPhoto id={this.state.currentPhoto.id} photo={this.state.currentPhoto} numPhotos={this.state.allPhotos.length} onClose={this.handleClose} onNext={this.handleNext} onPrev={this.handlePrev}/>
       )
     }
   }

@@ -1,9 +1,9 @@
 import React from 'react';
+import styles from '../styles/PhotoItem.css';
 
 class PhotoItem extends React.Component {
   constructor(props) {
     super(props);
-
     this.photoClick = this.photoClick.bind(this);
   }
 
@@ -15,7 +15,7 @@ class PhotoItem extends React.Component {
   render() {
     return (
       <div>
-        <img className="photoItem" src={this.props.photo.url} alt={this.props.photo.description} onClick={this.photoClick}/>
+        <img className={styles.photoItem} id={this.props.photo.id} src={this.props.photo.url} alt={this.props.photo.description} onClick={this.photoClick}/>
       </div>
     )
   }
