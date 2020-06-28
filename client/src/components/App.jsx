@@ -25,7 +25,7 @@ class App extends React.Component {
     this.handleBackHome = this.handleBackHome.bind(this);
     this.handleClose = this.handleClose.bind(this);
     this.handleNext = this.handleNext.bind(this);
-    this.handPrev = this.handlePrev.bind(this);
+    this.handlePrev = this.handlePrev.bind(this);
   }
 
   componentDidMount() {
@@ -69,16 +69,23 @@ class App extends React.Component {
   }
 
   handleNext(nextPhoto) {
-    this.setState({
-      currentPhoto: nextPhoto
-    })
+    let nextId = Number(nextPhoto.id);
+    nextId++;
+    for (var i = 0; i < this.state.allPhotos.length; i++) {
+      if (this.state.allPhotos[i].id === nextId) {
+        this.setState({currentPhoto: this.state.allPhotos[i]});
+      }
+    }
   }
 
   handlePrev(prevPhoto) {
-    this.setState({
-      currentPhoto: prevPhoto
-    })
-
+    let prevId = Number(prevPhoto.id);
+    prevId--;
+    for (var i = 0; i< this.state.allPhotos.length; i++) {
+      if (this.state.allPhotos[i].id === prevId) {
+        this.setState({currentPhoto: this.state.allPhotos[i]});
+      }
+    }
   }
 
   render() {

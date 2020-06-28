@@ -48,7 +48,7 @@
 
 .closeBtnContainer {
   display: flex;
-  position: relative;
+  vertical-align: middle;
 
 }
 
