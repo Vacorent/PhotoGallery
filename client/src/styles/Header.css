@@ -14,7 +14,7 @@
   position: relative;
   width: 1110px;
   margin: 0 auto;
-  top: 215px;
+  top: 100px;
 }
 
 .titleWrapper {
@@ -22,6 +22,7 @@
   position: relative;
   box-sizing: border-box;
   text-align: left;
+  top: 120px;
 }
 
 .title {
@@ -35,7 +36,7 @@
   display: block;
   border-spacing: border-box;
   position: relative;
-  top: -15px;
+  top: 110px;
 }
 
 .star{
@@ -46,7 +47,7 @@
   display: block;
   border-spacing: border-box;
   position: relative;
-  top: -35px;
+  top: 91px;
   left: 22px;
 }
 
@@ -59,7 +60,7 @@
   display: block;
   border-spacing: border-box;
   position: relative;
-  top: -53px;
+  top: 73px;
   left: 53px;
 }
 
@@ -74,8 +75,8 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   position: relative;
-  top: -71px;
-  left: 105px;
+  top: 54px;
+  left: 108px;
 }
 
 .dot {
@@ -89,7 +90,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   position: relative;
-  top: -89px;
+  top: 37px;
   left: 135px;
 }
 
@@ -99,51 +100,99 @@
   color: #717171;
 }
 
-.shareListing {
+.shareSaveContainer {
   display: flex;
+  flex-direction: row;
+  border-spacing: border-box;
+  vertical-align: bottom;
   position: relative;
-  cursor: pointer;
-  z-index: -1
+  top: -10px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }
 
-.shareIconWrapper {
+.shareSaveWrapper {
   display: block;
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  border-spacing: border-box;
   position: relative;
-  top: -104px;
-  left: 975px;
-  z-index: -1;
 }
 
-.shareIcon {
+.shareSaveBox {
   display: block;
+  border-spacing: border-box;
+  position: relative;
+}
+
+.shareBtn {
+  display: block;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  border-spacing: border-box;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  z-index: 100;
+  width: 4.5rem;
+  height: 2rem;
+  left: 980px;
+  top: 30px;
+}
+
+.shareBtnContainer {
+  display: flex;
+  cursor: pointer;
+  border-spacing: border-box;
+  position: relative;
+  text-decoration: underline;
+}
+
+.shareBtnWrapper {
+  display: flex;
+  flex-direction: row;
+  border-spacing: border-box;
+  cursor: pointer;
+  position: relative;
+}
+
+.shareBtnSvg {
+  display: block;
+  flex-direction: row;
   cursor: pointer;
   height: 16px;
   width: 16px;
   fill: currentcolor;
-  position: absolute;
-  z-index: -1
 }
 
-.shareListing {
-  display: block;
+.saveBtn {
+  display: inline-block;
+  background-color: white;
+  border: none;
+  align-items: flex-start;
   cursor: pointer;
+  border-spacing: border-box;
+  justify-content: center;
   position: relative;
-  left: 20px;
+  z-index: 10;
+  width: 4.5rem;
+  left: 1055px;
 }
 
-.saveIconWrapper {
+.saveBtnContainer {
   display: block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  border-spacing: border-box;
   position: relative;
-  top: -125px;
-  left: 1070px;
+  text-decoration: underline;
 }
 
-.saveIcon {
+.saveBtnWrapper {
+  display: block;
+  border-spacing: border-box;
+  position: relative;
+}
+
+.saveBtnSvg {
   display: block;
   fill: none;
   height: 16px;
@@ -151,11 +200,9 @@
   stroke: currentcolor;
   stroke-width: 2;
   overflow: visible;
-  position: absolute;
 }
 
-.saveListing {
-  display: block;
-  position: relative;
-  left: 20px;
+
+.shareBtn:hover, .saveBtn:hover {
+  background-color: rgb(249, 249, 249);
 }

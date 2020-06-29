@@ -8,7 +8,7 @@
   margin: 0px auto;
   position: absolute;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .homeGrid {
@@ -20,7 +20,7 @@
   line-height: 20px;
   margin: 0px auto;
   position: absolute;
-  top: 10%;
+  top: 100px;
 }
 
 .photo1Container {
