@@ -172,8 +172,9 @@
   display: block;
   position: relative;
   text-decoration: underline;
+  width: 32px;
   top: -9px;
-  left: 9px;
+  left: 20px;
 }
 
 .saveBtn {
@@ -216,15 +217,16 @@
   stroke-width: 2;
   overflow: visible;
   top: 10px;
-  left: 15px;
+  left: 12px;
 }
 
 .saveText{
   display: block;
   position: relative;
   text-decoration: underline;
+  width: 32px;
   top: -5px;
-  left: 10px;
+  left: 32px;
 }
 
 .shareBtn:hover, .saveBtn:hover {
