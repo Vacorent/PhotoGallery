@@ -137,7 +137,7 @@
   width: 4.5rem;
   height: 2rem;
   left: 980px;
-  top: 30px;
+  top: 25px;
 }
 
 .shareBtnContainer {
@@ -160,9 +160,20 @@
   display: block;
   flex-direction: row;
   cursor: pointer;
+  position: relative;
   height: 16px;
   width: 16px;
   fill: currentcolor;
+  top: 6px;
+  left: 2px;
+}
+
+.shareText {
+  display: block;
+  position: relative;
+  text-decoration: underline;
+  top: -9px;
+  left: 9px;
 }
 
 .saveBtn {
@@ -174,8 +185,11 @@
   border-spacing: border-box;
   justify-content: center;
   position: relative;
+  padding: 0px;
   z-index: 10;
-  width: 4.5rem;
+  width: 5rem;
+  height: 2rem;
+  top: -10px;
   left: 1055px;
 }
 
@@ -194,14 +208,24 @@
 
 .saveBtnSvg {
   display: block;
+  position: relative;
   fill: none;
   height: 16px;
   width: 16px;
   stroke: currentcolor;
   stroke-width: 2;
   overflow: visible;
+  top: 10px;
+  left: 15px;
 }
 
+.saveText{
+  display: block;
+  position: relative;
+  text-decoration: underline;
+  top: -5px;
+  left: 10px;
+}
 
 .shareBtn:hover, .saveBtn:hover {
   background-color: rgb(249, 249, 249);
