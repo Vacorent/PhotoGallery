@@ -1,8 +1,17 @@
 .photoItem {
   display: block;
+  background-color: white;
   box-sizing: border-box;
   cursor: pointer;
   width: 100%;
   height: 100%;
   margin-bottom: 10px;
+}
+
+.photoItem:hover {
+  background-color: black;
+}
+
+.photoItem:hover {
+  opacity: 0.8;
 }

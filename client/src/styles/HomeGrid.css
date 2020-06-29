@@ -8,7 +8,6 @@
   margin: 0px auto;
   position: absolute;
   width: 100%;
-  height: 100%;
 }
 
 .homeGrid {
@@ -20,29 +19,31 @@
   line-height: 20px;
   margin: 0px auto;
   position: absolute;
-  top: 10%;
+  top: 100px;
 }
 
 .photo1Container {
   flex: 2;
   max-height: 560px;
   max-width: 560px;
-  padding: 0px 5px 0px 0px;
+  margin-right: 5px;
 }
 
 .photo1 {
+  background-color: white;
   border-radius: 10px 0px 0px 10px;
   cursor: pointer;
   display: block;
   height: 560px;
   width: 560px;
-  padding: 0px 5px 0px 0px;
 }
 
 .photo23, .photo45 {
   flex: 1;
   width: 100%;
   height: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .photo2Container, .photo3Container, .photo4Container, .photo5Container {
@@ -50,51 +51,51 @@
 }
 
 .photo2 {
+  background-color: white;
   box-sizing: border-box;
   cursor: pointer;
   display: block;
   object-fit: cover;
   width: 280px;
-  height: 280px;
-  padding: 0px 5px 5px 5px;
+  height: 275px;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .photo3 {
+  background-color: white;
   box-sizing: border-box;
   cursor: pointer;
   display: block;
   object-fit: cover;
   width: 280px;
-  height: 280px;
-  padding: 5px 5px 0px 5px;
+  height: 275px;
   position: relative;
 }
 
 .photo4 {
+  background-color: white;
   border-radius: 0px 10px 0px 0px;
   box-sizing: border-box;
   cursor: pointer;
   display: block;
   object-fit: cover;
   width: 280px;
-  height: 280px;
-  padding: 0px 0px 5px 5px;
+  height: 275px;
   position: relative;
-
+  margin-bottom: 10px;
 }
 
 .photo5 {
+  background-color: white;
   border-radius: 0px 0px 10px 0px;
   box-sizing: border-box;
   cursor: pointer;
   display: block;
   object-fit: cover;
   width: 280px;
-  height: 280px;
-  padding: 5px 0px 0px 5px;
+  height: 275px;
   position: relative;
-
 }
 
 .showAll {
@@ -120,4 +121,12 @@
   width: auto;
   top: 90%;
   right: 2%;
+}
+
+img:hover {
+  background-color: black;
+}
+
+img:hover {
+  opacity: 0.8;
 }
