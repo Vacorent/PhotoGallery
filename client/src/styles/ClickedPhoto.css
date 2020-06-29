@@ -203,3 +203,135 @@
 .nextBtn:hover, .prevBtn:hover {
   background-color: rgb(245, 245, 245);
 }
+
+.shareSaveContainer {
+  display: flex;
+  flex-direction: row;
+  border-spacing: border-box;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  vertical-align: middle;
+  position: relative;
+  width: 150px;
+  top: -840px;
+  left: 700px;
+  margin: 0 auto;
+}
+
+.shareSaveWrapper {
+  display: flex;
+  border-spacing: border-box;
+  position: relative;
+}
+
+.shareSaveBox {
+  display: flex;
+  border-spacing: border-box;
+  position: relative;
+}
+
+.shareBtn {
+  display: flex;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  border-spacing: border-box;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  z-index: 100;
+  width: 4.5rem;
+  height: 2rem;
+  top: 25px;
+}
+
+.shareBtnContainer {
+  display: flex;
+  cursor: pointer;
+  border-spacing: border-box;
+  position: relative;
+  text-decoration: underline;
+}
+
+.shareBtnWrapper {
+  display: flex;
+  flex-direction: row;
+  border-spacing: border-box;
+  cursor: pointer;
+  position: relative;
+}
+
+.shareBtnSvg {
+  display: block;
+  flex-direction: row;
+  cursor: pointer;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  fill: currentcolor;
+  top: 0px;
+  left: 2px;
+}
+
+.shareText {
+  display: block;
+  position: relative;
+  text-decoration: underline;
+  width: 32px;
+  top: 1px;
+  left: 5px;
+}
+
+.saveBtn {
+  display: inline-block;
+  background-color: white;
+  border: none;
+  align-items: flex-start;
+  cursor: pointer;
+  border-spacing: border-box;
+  position: relative;
+  z-index: 10;
+  width: 5rem;
+  height: 2rem;
+  top: 9px;
+  left: 20px;
+}
+
+.saveBtnContainer {
+  display: flex;
+  border-spacing: border-box;
+  position: relative;
+  text-decoration: underline;
+}
+
+.saveBtnWrapper {
+  display: flex;
+  border-spacing: border-box;
+  position: relative;
+}
+
+.saveBtnSvg {
+  display: block;
+  position: relative;
+  fill: none;
+  height: 16px;
+  width: 16px;
+  stroke: currentcolor;
+  stroke-width: 2;
+  overflow: visible;
+  top: 16px;
+}
+
+.saveText{
+  display: block;
+  position: relative;
+  text-decoration: underline;
+  width: 32px;
+  top: 1.5px;
+  left: 19px;
+}
+
+.shareBtn:hover, .saveBtn:hover {
+  background-color: rgb(249, 249, 249);
+}
