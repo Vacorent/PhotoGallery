@@ -1,4 +1,4 @@
-DROP DATABASE appbnb;
+DROP DATABASE IF EXISTS appbnb;
 
 CREATE DATABASE appbnb;
 
