@@ -6,10 +6,8 @@ module.exports = {
     let queryStr = 'SELECT * FROM photos';
     db.connection.query(queryStr, (err, data) => {
       if (err) {
-        console.log('Photos Query FAIL');
         callback(err);
       } else {
-        console.log('Photos Query SUCCESS');
         callback(null, data);
       }
     });
@@ -18,9 +16,8 @@ module.exports = {
     let queryStr = 'SELECT * FROM header';
     db.connection.query(queryStr, (err, data) => {
       if (err) {
-        console.log('Reviews Query FAIL');
+        callback(err);
       } else {
-        console.log('Reviews Query FAIL');
         callback(null, data);
       }
     });
