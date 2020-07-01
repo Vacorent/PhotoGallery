@@ -44,7 +44,7 @@ class App extends React.Component {
           homePhotos: initPhotos
         });
       })
-      .catch(err => console.log('CLIENT Could not get photos'))
+      .catch(err => {})
   }
 
   handlePhotoClick(photoData, state) {
