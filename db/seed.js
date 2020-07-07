@@ -3,8 +3,8 @@ const mysql = require('mysql');
 const db = require('./index.js');
 
 for (var i = 1; i <= 72; i++) {
-  // let imageUrl = 'https://appbnb.s3-us-west-1.amazonaws.com/' + `image${i}` + '.jpg';
-  let imageUrl = `https://a0.muscache.com/im/pictures/c462daa0-2308-4873-ba8f-f14e4bcd7fd4.jpg?im_w=720`;
+  let imageUrl = 'https://appbnb.s3-us-west-1.amazonaws.com/' + `image${i}` + '.jpg';
+  // let imageUrl = `https://a0.muscache.com/im/pictures/c462daa0-2308-4873-ba8f-f14e4bcd7fd4.jpg?im_w=720`;
   let description = faker.lorem.sentence();
 
   let queryStr = `INSERT INTO photos (url, description) VALUES ('${imageUrl}', '${description}')`;

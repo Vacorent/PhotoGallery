@@ -14,10 +14,19 @@
 }
 
 .currentPhoto {
-  display: flex;
+  /* display: flex;
   position: relative;
   margin: 0 auto;
-  width: 50%;
+  width: 50%; */
+  background-color: white;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  object-fit: cover;
+  width: 500px;
+  height: 400px;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .descriptionWrapper {
