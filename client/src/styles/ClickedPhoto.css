@@ -14,10 +14,6 @@
 }
 
 .currentPhoto {
-  /* display: flex;
-  position: relative;
-  margin: 0 auto;
-  width: 50%; */
   background-color: white;
   box-sizing: border-box;
   cursor: pointer;
