@@ -245,10 +245,10 @@
   cursor: pointer;
   position: relative;
   white-space: nowrap;
-  z-index: 100;
+  z-index: 3;
   width: 4.5rem;
   height: 2rem;
-  top: 25px;
+  top: 17px;
 }
 
 .shareBtnContainer {
@@ -275,7 +275,7 @@
   height: 16px;
   width: 16px;
   fill: currentcolor;
-  top: 0px;
+  top: 8px;
   left: 2px;
 }
 
@@ -284,7 +284,7 @@
   position: relative;
   text-decoration: underline;
   width: 32px;
-  top: 1px;
+  top: 9px;
   left: 5px;
 }
 
@@ -299,7 +299,7 @@
   z-index: 10;
   width: 5rem;
   height: 2rem;
-  top: 9px;
+  top: 18px;
   left: 20px;
 }
 
@@ -325,7 +325,12 @@
   stroke: currentcolor;
   stroke-width: 2;
   overflow: visible;
-  top: 16.5px;
+  top: 8.5px;
+  left: 5px;
+}
+
+.saveBtnSvg:hover {
+  fill: #FF385C;
 }
 
 .saveText{
@@ -333,8 +338,8 @@
   position: relative;
   text-decoration: underline;
   width: 32px;
-  top: 1.5px;
-  left: 19px;
+  top: -8px;
+  left: 24px;
 }
 
 .shareBtn:hover, .saveBtn:hover {

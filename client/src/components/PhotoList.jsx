@@ -14,7 +14,8 @@ class PhotoList extends React.Component {
     event.preventDefault();
     this.props.handleHome({
       homeActive: true,
-      photoListActive: false
+      photoListActive: false,
+      fromGrid: true
     })
   }
 

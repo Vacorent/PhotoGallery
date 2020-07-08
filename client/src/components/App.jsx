@@ -108,7 +108,9 @@ class App extends React.Component {
       )
     } else if (this.state.photoItemActive) {
       return (
-        <ClickedPhoto id={this.state.currentPhoto.id} photo={this.state.currentPhoto} numPhotos={this.state.allPhotos.length} gridClick={this.state.fromGrid} onClose={this.handleClose} onNext={this.handleNext} onPrev={this.handlePrev}/>
+        <div className={styles.ClickedPhotoContainer}>
+          <ClickedPhoto id={this.state.currentPhoto.id} photo={this.state.currentPhoto} numPhotos={this.state.allPhotos.length} gridClick={this.state.fromGrid} onClose={this.handleClose} onNext={this.handleNext} onPrev={this.handlePrev}/>
+        </div>
       )
     }
   }

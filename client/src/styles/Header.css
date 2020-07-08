@@ -220,6 +220,10 @@
   left: 12px;
 }
 
+.saveBtnSvg:hover {
+  fill: #FF385C;
+}
+
 .saveText{
   display: block;
   position: relative;
