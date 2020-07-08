@@ -16,11 +16,10 @@
 .currentPhoto {
   background-color: white;
   box-sizing: border-box;
-  cursor: pointer;
   display: block;
   object-fit: cover;
   width: 500px;
-  height: 400px;
+  height: 480px;
   position: relative;
   margin-bottom: 10px;
 }

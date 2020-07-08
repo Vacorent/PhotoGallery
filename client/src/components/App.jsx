@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from 'react-bootstrap-modal';
 import Header from './Header.jsx';
 import HomeGrid from './HomeGrid.jsx';
 import PhotoList from './PhotoList.jsx';
@@ -16,8 +17,10 @@ class App extends React.Component {
       homeActive: true,
       fromGrid: true,
       photoListActive: false,
-      photoItemActive: false
+      photoItemActive: false,
     }
+
+
 
     this.getPhotos = this.getPhotos.bind(this);
     this.handlePhotoClick = this.handlePhotoClick.bind(this);
@@ -52,7 +55,8 @@ class App extends React.Component {
       currentPhoto: photoData,
       homeActive: false,
       photoListActive: false,
-      photoItemActive: true
+      photoItemActive: true,
+      showPhoto: true
     })
   }
 
@@ -108,7 +112,7 @@ class App extends React.Component {
       )
     } else if (this.state.photoItemActive) {
       return (
-        <div className={styles.ClickedPhotoContainer}>
+        <div className={styles.clickedPhotoContainer}>
           <ClickedPhoto id={this.state.currentPhoto.id} photo={this.state.currentPhoto} numPhotos={this.state.allPhotos.length} gridClick={this.state.fromGrid} onClose={this.handleClose} onNext={this.handleNext} onPrev={this.handlePrev}/>
         </div>
       )

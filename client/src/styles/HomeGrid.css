@@ -123,10 +123,10 @@
   right: 2%;
 }
 
-img:hover {
+.photo1:hover, .photo2:hover, .photo3:hover, .photo4:hover, .photo5:hover {
   background-color: black;
 }
 
-img:hover {
+.photo1:hover, .photo2:hover, .photo3:hover, .photo4:hover, .photo5:hover {
   opacity: 0.8;
 }
