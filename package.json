@@ -51,7 +51,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "knex": "^0.21.1",
+    "knex": "^2.4.0",
     "react-bootstrap-modal": "^4.2.0"
   }
 }
